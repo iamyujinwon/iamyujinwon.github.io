@@ -224,25 +224,6 @@ button:hover{
     color: #25b5e5;
 }
 
-/*Subscribe Form*/
-#email-form {
-    text-align: center;
-    margin: 20px;
-}
-
-#email-form input {
-    border: 2px solid grey;
-    border-radius: 20px;
-    display: inline;
-    font-size: 14px;
-    padding: 10px;
-    width: 300px;
-}
-
-#sub-button {
-    font-size: 14px;
-}
-
 /*Icons Section*/
 #icon-section {
     display: flex;
@@ -272,6 +253,26 @@ button:hover{
     padding: 0px 20px;
 }
 
+/*Subscribe Form*/
+#email-form {
+    text-align: center;
+    margin: 20px;
+}
+
+#email-form input {
+    border: 2px solid grey;
+    border-radius: 20px;
+    display: inline;
+    font-size: 18px;
+    padding: 15px;
+    width: 330px;
+    height: 50px;
+}
+
+#sub-button {
+    font-size: 18px;
+    height: 50px;
+}
 
 /*Footer Section*/
 .grid-footer{

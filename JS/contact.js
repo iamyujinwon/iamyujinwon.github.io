@@ -1,4 +1,3 @@
-// bring tags
 const form = document.getElementById('form');
 const name = document.getElementById('name');
 const email = document.getElementById('email-address');
@@ -8,14 +7,11 @@ const postalCode = document.getElementById('postal-code');
 const reasons = document.querySelectorAll('.input-option');
 const message = document.querySelector('#message');
 
-// after implementation, start this function // e--> event
 form.addEventListener('submit', (s) => {
-   
     checkInputs();
 
-    // && checkReason() 일단 이거 제외시킴!
-    if (!checkName() || !checkEmail() || !checkAddress() || !checkCity() || !checkPostalCode() || !checkMessage()) {
-        s.preventDefault();
+    if (!checkName() || !checkEmail() || !checkAddress() || !checkCity() || !checkPostalCode() || !checkReason() || !checkMessage() || (!radioOption.onclick() && !checkOrderNum())) {
+        s.preventDefault();       
     }
 });
 
@@ -25,22 +21,19 @@ function checkInputs() {
     checkAddress();
     checkCity();
     checkPostalCode();
-    // checkReason();
+    checkReason();
     checkMessage();
+    checkOrderNum();
 };
 
-// === --> value and type equal // == --> only value equal
 function checkName() {
     const nameValue = name.value.trim();
 
     if (nameValue == '') {
-            //show error
-        //add error class
         setErrorFor(name, 'Name cannot be blank')
         return false;
     }
     else {
-        // add success class
         setSuccessFor(name);
         return true;
     }
@@ -63,7 +56,6 @@ function checkEmail() {
     }
 };
 
-//bool true false
 function isEmail(value) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(value);
@@ -117,26 +109,12 @@ function isPostalCode(postalCode) {
     return re.test(postalCode);
 };
 
-
-// 여기 위로는 이상이 없다.
-
 function checkReason() {
-   
     for(let i = 0; i < reasons.length; i++) {
         if (reasons[i].checked) {
             return true;
         }
     }
-
-    const formControl = document.querySelector('#form-contact'); // .form-control
-
-    const small = formControl.querySelector('small');
-        //add error class --> form-control --> overwrite
-    formControl.className = 'form-control error'; // having two class names 
-    
-    //add error message inside small
-    small.innerText = message;
-
     return false;
 };
 
@@ -165,7 +143,6 @@ function setSuccessFor(input) {
     formControl.className = 'form-control success'
 };
 
-///
 const radioOption = document.querySelector('#radio-options');
 const orderProblem = document.querySelector('#order-problem');
 const orderNum = document.querySelector('#order-number');
@@ -189,3 +166,21 @@ function setHiddenOrderNum(input) {
     order.className = 'order hidden';
     input.value = '';
 };
+
+function checkOrderNum() {
+    const orderNumValue = orderNum.value.trim();
+    const order = orderNum.parentElement;
+    if(orderProblem.checked) {
+        if (orderNumValue == '') {
+            order.className = "order visible error";
+            return false;
+        }
+        else {
+            order.className = "order visible success";
+            return true;
+        }
+    }
+    else {
+        return true;
+    }
+}

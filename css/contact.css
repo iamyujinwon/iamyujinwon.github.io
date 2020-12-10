@@ -68,19 +68,6 @@ button:hover{
     color: #000000;
 }
 
-
-/*Contact Us Form*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-/* 
-body {
-    background-color: #000000;
-} */
-
 /*Contact Us Form*/
 .wrapper {
     background-color: #171717;
@@ -95,7 +82,6 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 800px;
-
     max-width: 100%;
     overflow: hidden;
     margin: 30px;
@@ -147,8 +133,11 @@ body {
     width: 100%;
 }
 
-/*여기 메세지랑 다른것들도 추가하기!!!*/
 .form-control.success input{
+    border-color: #2ecc71;
+}
+
+.form-control.success textarea{
     border-color: #2ecc71;
 }
 
@@ -156,28 +145,25 @@ body {
     border-color: #e74c3c;
 }
 
-/*grid 사용해서 이렇게 만들고, 한줄로 나열하기!!*/
+.form-control.error textarea {
+    border-color: #e74c3c;
+}
+
 .form-radio {
     display: grid;
     grid-template-columns:1fr 3fr;
     margin-top: 15px;
 }
 
-/*grid 사용해서 이렇게 만들고, 한줄로 나열하기!!*/
 #radio-options {
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
 }
 
-/*small이랑 동일하게 있게 만들기*/
 #contact-title {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-bottom: 20px;
     position: relative;
-}
-
-#contact-small {
-    margin-bottom: 5px; /*여기서 왜 바닥인데 위로*/
 }
 
 .form-radio label {
@@ -185,7 +171,7 @@ body {
     margin-bottom: 40px;
 }
 
-.form-control i {
+.form-control i{
     position: absolute;
     top: 40px;
     right: 10px;
@@ -202,14 +188,14 @@ body {
     visibility: visible;
 }
 
-.form-control small, .form-radio small, .order small{
+.form-control small {
     visibility: hidden;
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
-.form-control.error small, .form-radio.error small, .contact-title.error small{
+.form-control.error small {
     color: #e74c3c;
     visibility: visible; 
 }
@@ -223,13 +209,13 @@ body {
     margin-bottom: 10px;
 }
 
-#message-section textarea {
+.form-control textarea {
     border: 2px solid grey;
     border-radius: 4px;
     padding: 10px 10px;
     width:100%; 
 	height:200px; 
-    resize:none;/* 크기고정 */ 
+    resize:none; 
 }
 
 .order {
@@ -255,29 +241,44 @@ body {
     display: none;
 }
 
-.order-section.error input {
+.order.error input {
     border-color: #e74c3c;
 }
 
-.order-section.success input {
+.order.success input {
     border-color: #2ecc71;
 }
 
-#last-select {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5px;
-}
-
 #button{
-    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
     font-size: 15px;
     text-align: center;
 }
 
-#submit-button:hover, #back-button:hover {
+#submit-button {
+    font-size: 15px;
+}
+
+#submit-button:hover{
     background-color: #000000;
     color: #fff;
+}
+
+#back {
+    padding: 12px 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#back a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#back a:hover {
+    color: grey;
 }
 
 #hidden-name {
@@ -291,8 +292,8 @@ body {
     font-size: 14px;
     padding: 10px;
     width: 100px;
+    color: #000000;
 }
-
 
 /*Icons Section*/
 #icon-section {
@@ -333,13 +334,15 @@ body {
     border: 2px solid grey;
     border-radius: 20px;
     display: inline;
-    font-size: 14px;
-    padding: 10px;
-    width: 300px;
+    font-size: 18px;
+    padding: 15px;
+    width: 330px;
+    height: 50px;
 }
 
 #sub-button {
-    font-size: 14px;
+    font-size: 18px;
+    height: 50px;
 }
 
 /*Footer Section*/

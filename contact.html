@@ -16,12 +16,12 @@
             
             <ul class="nav-links">
                 <li><a href="NowPlaying.html">See A Movie</a></li>
-                <li><a href="https://www.amctheatres.com/movie-theatres">Our Theatres</a></li>
-                <li><a href="https://www.amctheatres.com/food-and-drink">Food & Drinks</a></li>
-                <li><a href="https://www.amctheatres.com/on-demand">On Demand</a></li>
-                <li><a href="https://www.amctheatres.com/offers">Extras</a></li>
+                <li><a href="#">Our Theatres</a></li>
+                <li><a href="#">Food & Drinks</a></li>
+                <li><a href="#">On Demand</a></li>
+                <li><a href="#">Extras</a></li>
                 <li><a href="#">Search</a></li>
-                <li><a href="https://www.amctheatres.com/offers/showtimes/all/2020-11-29/amc-empire-25/all">Showtimes</a></li>
+                <li><a href="#">Showtimes</a></li>
             </ul>
 
             <!--I tried to make this button on header section because I think it is necessary for customers to easily click if they want to contact to the movie theatre. Therefore, I tried to modify the header and navigation seaction to make my website look more simple to use.-->
@@ -37,7 +37,7 @@
                     <div class="grid-col2">
                         <!--Name-->
                         <div class="form-control">
-                            <label>Name</label>
+                            <label for="name">Name</label>
                             <input type="text" id="name" name="name">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-times-circle"></i>
@@ -45,8 +45,8 @@
                         </div>
                         <!--Email address-->
                         <div class="form-control">
-                            <label>Email Address</label>
-                            <input type="email" id="email-address" name="email">
+                            <label for="email-address">Email Address</label>
+                            <input type="email" id="email-address" name="email-address">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-times-circle"></i>
                             <div class="invalid-feedback">
@@ -58,7 +58,7 @@
                     <div class="grid-second">
                         <!--Address-->
                         <div class="form-control">
-                            <label>Address</label>
+                            <label for="address">Address</label>
                             <input type="text" id="address" name="address">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-times-circle"></i>
@@ -66,7 +66,7 @@
                         </div>
                         <!--City-->
                         <div class="form-control">
-                            <label>City</label>
+                            <label for="city">City</label>
                             <input type="text" id="city" list="cityList" name="city">
                             <datalist id="cityList">
                                 <option>Toronto</option>
@@ -90,7 +90,7 @@
                          
                         <!--Postal Code-->
                         <div class="form-control">
-                            <label>Postal Code</label>
+                            <label for="postal-code">Postal Code</label>
                             <input type="text" id="postal-code" name="postal-code">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-times-circle"></i>
@@ -99,23 +99,22 @@
                     </div>
 
                     <!--Radio Options-->
-                    <div class="form-radio" id="form-contact">
+                    <div class="form-radio">
                         <div id="contact-title">
                             <label id="contact-reason">Contact Reason</label>
-                            <small class="contact-small">Error Message</small>
                         </div>
                         <div id="radio-options">
                             <div>
                                 <input type="radio" class="input-option" name="reason" value="question">
-                                <label for="input-option">Question</label>
+                                <label for="reason">Question</label>
                             </div>
                             <div>
                                 <input type="radio" class="input-option" name="reason" value="comment">
-                                <label for="input-option">Comment</label>
+                                <label for="reason">Comment</label>
                             </div>
                             <div>
                                 <input type="radio" id="order-problem" class="input-option" name="reason" value="problem">
-                                <label for="input-option">Order Problem</label>
+                                <label for="reason">Order Problem</label>
                             </div>
                         </div>
                     </div>
@@ -123,8 +122,7 @@
                     <!--Order Section-->
                     <div class="order">
                         <input type="text" id="order-number" placeholder="Order Number" name="order-number">
-                        <small>Error Message</small>
-                    </div>
+                    </div> 
 
                     <!--Message-->
                     <div class="form-control" id="message-section">
@@ -142,6 +140,11 @@
 
                     <!--Subscribe button-->
                     <div id="button">
+                        <div id="back">
+                            <i class="fas fa-chevron-left"></i>
+                            <a href="index.html">Back</a>
+                        </div>
+                     
                         <div id="submit">
                             <button id="submit-button">Submit</button>
                         </div>
@@ -167,7 +170,6 @@
 
         <!--Email Form to subscribe-->
         <form id="email-form" action="https://formspree.io/f/mvovwowb" method="post">
-            <!-- <label for="email">Your Email</label> -->
             <input name="Email" id="email" type="email" placeholder="Enter Your Email">
             <button id="sub-button" type="subscribe">Subscribe</button>
         </form>
@@ -238,7 +240,6 @@
             <a href="index.html">  <img src="images/logo.png" alt="a picture of logo"></a>
             <a href="#">A Wanda Group Company</a>
         </div>
-
 
         <script src="JS/contact.js"></script>
     </body>
