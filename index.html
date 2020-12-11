@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Movie</title>
+        <title>Movie | Assignment 2</title>
         <meta charset="UTF-8">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
@@ -28,21 +28,14 @@
         </header>
 
         <!--Hero Section-->
-        <div class="banner">
-            <div class="container">
-                <div class="banner-content">
-                    <h2><span class="color-change">Welcome</span> Back to the Movies</h2>
 
-                    <p>
-                        Most theatres are now open or will reopen soon! As we welcome you back and celebrate 100 years of movies at AMC, out top priority is your health and safety. We hope you enjoy your life with movies that can make you happy. Select any movie that you want to enjoy and watch it at AMC where you can make your dream come true!
-                    </p>
-    
-                    <a href="https://www.amctheatres.com/showtimes/all/2020-11-29/amc-empire-25/all?rel=safe-and-clean_reopening_hp_hero">Get Tickets</a>
-                    <a href="https://www.amctheatres.com/amc-safe-and-clean?rel=safe-and-clean_reopening_hp_hero">Learn More</a>
-                </div>
+        <div class="hero-section">
+            <div class="banner-content">
+                <button class="button-arrow" onclick="left()" id="left"><i class="fas fa-chevron-left"></i></button>
+                <img src="images/carousel_img.png" width=80% alt="an image of carousel">
+                <button class="button-arrow" onclick="right()" id="right"><i class="fas fa-chevron-right"></i></i></button>
             </div>
         </div>
-     
 
         <!--Information Section-->
 
@@ -61,6 +54,7 @@
             </div>
         </section>
 
+
         <section id="info-section">
             <div class="info-content">
                 <span class="title-event">POPCORN BUCKET EVENT</span>
@@ -76,6 +70,7 @@
             </div>
             <img src="images/info-img2.jpg" alt="a picture of event2">
         </section>
+
 
         <section id="info-section">
             <img src="images/info-img3.jpg" alt="a picture of event3">
@@ -183,5 +178,7 @@
             <a href="#">A Wanda Group Company</a>
         </div>
 
+        
+        <script src="JS/carousel.js"></script>
     </body>
 </html>

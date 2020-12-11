@@ -269,3 +269,85 @@ hr.line {
     background-color: #171717;
     font-size: 0.8vw;
 }
+
+/*Media Section*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+    #featured-movies{
+        margin-top: 30px;
+        font-size: 50px;
+    }
+    
+    #now-playing{
+        margin-top: 30px;
+        font-size: 40px;
+    }
+
+    .movie-lists {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .movie-contents img{
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .movie-contents{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .movie-contents{
+        line-height: 100px;
+    }
+
+    .movie-contents p {
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    .movie-title{
+        font-size: 80px;
+    }
+
+    .movie-info{
+        font-size: 50px;
+    }
+
+    .get-tickets button{
+        font-size: 50px;
+        padding: 20px 30px;
+
+    }
+
+    #icon-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 0;
+    }
+
+    #icon-section ul li a{
+        color: #fff;
+        text-align: center;
+        padding: 8px 10px;
+        border: none;
+        font-size: 120px;
+    }
+
+    #email-form input {
+        border: 2px solid grey;
+        border-radius: 50px;
+        font-size: 35px;
+        width: 700px;
+        height: 100px;
+    }
+
+    #sub-button {
+        font-size: 35px;
+        height: 100px;
+    }
+
+
+}
