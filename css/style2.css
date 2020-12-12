@@ -314,6 +314,7 @@ hr.line {
     }
 
     #icon-section ul li a{
+        display: grid;
         color: #fff;
         text-align: center;
         padding: 8px 10px;

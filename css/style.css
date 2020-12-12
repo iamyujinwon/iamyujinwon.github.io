@@ -332,6 +332,10 @@ hr.line {
         padding: 0;
     }
 
+    #info-section img {
+        margin-top: 30px;
+    }
+
     .title-event{
         color: #fff;
         font-size: 20px;
