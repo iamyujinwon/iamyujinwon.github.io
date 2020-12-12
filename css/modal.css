@@ -1,0 +1,232 @@
+/*Modal Section*/
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    z-index:1;
+    background-color: rgba(158, 158, 158,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s; 
+} 
+
+.modal {
+    position: relative;
+    background-color: white;
+    width: 75%;
+    height: 90%;
+    padding: 30px 50px;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; 
+    background-color: #171717;
+    overflow: scroll;
+    border-radius: 50px;
+
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+} 
+
+.modal::-webkit-scrollbar {
+    display: none;
+}
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-close {
+    position: fixed;
+    top: 20px;
+    right: 70px;
+    font-size: 4rem;
+    color:#fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: yellow;
+}
+
+.video-space{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+#poster-modal{
+    width: 21vw;
+} 
+
+#grid-reviews{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    color: #fff;
+    margin-top: 150px;
+    margin-bottom: 200px;
+} 
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    min-width: 200px;
+}
+
+.video-container{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#title-ticket{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+}
+
+#add-watchlist{
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 25px;
+    background-color: #000000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    border-style: solid;
+    border-color: #fff;
+}
+
+#get-tickets{
+    margin-right: 20px;
+}
+
+#get-tick {
+    font-size: 1.6rem;
+}
+
+#add-watchlist:hover{
+    background-color: #fff;
+    color: #000000;
+}
+
+.movie-title-modal{
+    color: #fff;
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+.grid-desc{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.movie-info span{
+    color: grey;
+    display: flex;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+.description p{
+    color: #fff;
+    line-height: 35px;
+    font-size: 1.6rem;
+}
+
+.movie-info {
+    padding-left: 20px;
+} 
+
+.movie-contents {
+    font-size: 3vw;
+} 
+
+.ratings{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ratings img{
+    width: 3vw;
+    margin-right: 10px;
+}
+
+.ratings-contents{
+    display: grid;
+    grid-template-columns: 0.6fr 2fr;
+}
+
+.ratings-contents:hover{
+    color: #25b5e5;
+}
+
+.ratings span::after{
+    content: "\A";
+    white-space: pre;
+}
+
+.rating-by-people{
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.grid-cast{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    color: #fff;
+}
+
+.cast-description p{
+    padding-right: 100px;
+    line-height: 35px;
+    font-size: 1.6rem;
+}
+
+.name{
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.role{
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.main-contents div{
+    margin-bottom: 30px;
+    font-size: 1vw;
+}
+
+.main-contents p{
+    margin-bottom: 100px;
+}
+
+.main-name{
+    margin-bottom: 100px;
+} 
